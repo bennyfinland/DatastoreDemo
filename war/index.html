@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>   
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAWHqk4TjjOJ16sJeAFo57jhO7H8oNwa_E&sensor=false"></script>
+    <script src="utils.js"></script>
+
+    <title>Online/Offline locations</title>
+  </head>
+
+  <body>
+	<div id="pageContainer">
+		<h1 id="mainHeader">Data store testing with ajax</h1>
+		<div id="log" class="tabContent">
+			<table>
+				<tr>
+					<td>State: </td><td id="state"></td>
+				</tr>
+				<tr>
+					<td>Long: </td><td id="long"></td><td>Lat: </td><td id="lat"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<ul id="tabs">
+  			<li><a href="#record">Record</a></li>
+  			<li><a href="#modify">Modify</a></li>
+		</ul>
+		
+		<div class="tabContent" id="record">
+			<h2>Record a session</h2>
+			<span class="add-on">Enter session name</span> <input class="span2"
+				id="session" name="session" type="text"
+				placeholder="Session name...">
+			<button type="button" onclick="startRecording()">Start</button>
+			<button type="button" onclick="stopRecording()">Stop</button>
+		</div>
+		
+		<div class="tabContent" id="modify">
+			<form action="">
+			<h2>Modify a session</h2>
+			Existing sessions: <select id="querySelector" name="sessions"></select>
+			<button type="button" onclick="queryLocations()">Display data</button>
+			<button type="button" onclick="deleteSession()">Delete data</button>
+			</form>
+		</div>		
+		<div id="infoScreen" class="tabContent"></div>
+		<div id="mapCanvas"></div>
+	</div>
+</body>
+</html>

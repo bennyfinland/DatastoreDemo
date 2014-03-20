@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+  	<servlet>
+        <servlet-name>savePosition</servlet-name>
+        <servlet-class>datastoring.LocationSavingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>savePosition</servlet-name>
+        <url-pattern>/savePosition</url-pattern>
+    </servlet-mapping>
+        
+   	<servlet>
+        <servlet-name>newSession</servlet-name>
+        <servlet-class>datastoring.SessionCreationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newSession</servlet-name>
+        <url-pattern>/newSession</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getSessions</servlet-name>
+        <servlet-class>datastoring.SessionListRetrievalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSessions</servlet-name>
+        <url-pattern>/getSessions</url-pattern>
+    </servlet-mapping>
+    	
+	<servlet>
+		<servlet-name>query</servlet-name>
+		<servlet-class>datastoring.SessionSelectionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>query</servlet-name>
+		<url-pattern>/query</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>datastoring.SessionDeletionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
