@@ -1,4 +1,4 @@
-Data store demo
+Data store demo (JavaScript)
 ==========================
 
 
