@@ -2,7 +2,7 @@ Data store demo
 ==========================
 
 
-JS Code poll: DatastoreDemo/war/utils.js (Eclipse)
+<b>JS Code poll: DatastoreDemo/war/utils.js (Eclipse)</b>
 
 
 Operation environment: Andriod with Mozilla Firefox browser
