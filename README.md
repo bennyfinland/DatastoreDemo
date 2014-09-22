@@ -2,9 +2,8 @@ Data store demo
 ==========================
 
 
-Code poll: DatastoreDemo/war/index.html (Eclipse)
+JS Code poll: DatastoreDemo/war/utils.js (Eclipse)
 
-Link: http://datastore-project2.appspot.com/
 
 Operation environment: Andriod with Mozilla Firefox browser
 
